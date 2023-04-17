@@ -26,31 +26,31 @@
                         <div class="mb-3">
                             <div class="form-row row">
                                 <div class="mb-3 col-md-6">
-                                    <label for="firstName" class="form-label">Křestní jméno</label>
+                                    <label for="firstName" class="form-label">First name</label>
                                     <input type="text" class="form-control" id="firstName" name="firstName"
-                                        placeholder="Křestní jméno">
+                                        placeholder="First name">
                                 </div>
                                 <div class="mb-3 col-md-6">
-                                    <label for="lastName" class="form-label">Příjmení</label>
+                                    <label for="lastName" class="form-label">Last name</label>
                                     <input type="text" class="form-control" id="lastName" name="lastName"
-                                        placeholder="Příjmení">
+                                        placeholder="Last name">
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <label for="email" class="form-label">E-mail</label>
+                                <label for="email" class="form-label">Email</label>
                                 <input type="email" class="form-control" id="email" name="email"
                                     placeholder="name@mail.com">
                             </div>
                         </div>
                         <div class="mb-3 col-md-4">
-                            <label for="clientType" class="form-label">Jste</label>
+                            <label for="clientType" class="form-label">Legal status</label>
                             <select id="clientType" name="clientType" class="form-control">
-                                <option selected="">Fyzická osoba</option>
-                                <option>Právnická osoba</option>
+                                <option selected="">Person</option>
+                                <option>Company</option>
                             </select>
                         </div>
                         <div id="compNameDiv" class="mb-3 col-md-4" style="display:none;">
-                            <label for="companyName" class="form-label">Jméno společnosti</label>
+                            <label for="companyName" class="form-label">Company name</label>
                             <input type="text" class="form-control" id="companyName" name="companyName">
                         </div>
 
@@ -71,9 +71,9 @@
                         <!--Section for case specific attributes-->
 
                         <fieldset>
-                            <legend style="color: white; margin-top: 1em;">Tyto aplikace používám od roku 2015 až do současnosti.</legend>
-                            <div style="display: flex; justify-content: space-between;">
-                                <div>
+                            <legend>I have been using these apps for any time period from 2015 until now.</legend>
+                            ​<div style="display: flex; justify-content: space-between;">
+                                <div style="display: flex; justify-content: space-between;">
                                     <input type="checkbox" id="Whatsapp" name="Whatsapp" unchecked>
                                     <label for="scales">Whatsapp</label>
                                 </div>
@@ -89,31 +89,27 @@
                         </fieldset>
 
                         <div class="row" style="margin-top: 2em; align-items: flex-end;">
-                            <div class="mb-3 mt-3 col-md-4">
-                                <label for="Phone number I used for my Whatsapp account:" class="form-label">Telefonní
-                                    číslo, které jsem použil
-                                    pro svůj účet Whatsapp:: </label>
+                            <div class="mb-3 col-md-4">
+                                <label for="Phone number I used for my Whatsapp account:" class="form-label">Phone
+                                    number I used for my Whatsapp account:: </label>
                                 <input class="form-control" type="0" maxlength="200"
                                     id="Phone number I used for my Whatsapp account:"
                                     name="custom__Phone number I used for my Whatsapp account:" placeholder="phone">
                             </div>
 
+                            ​
                             <div class="mb-3 col-md-4">
-                                <label for="Username I use for my Facebook account:" class="form-label">Uživatelské
-                                    jméno,
-                                    které používám pro svůj
-                                    účet na Facebooku:: </label>
+                                <label for="Username I use for my Facebook account:" class="form-label">Username I use
+                                    for my Facebook account:: </label>
                                 <input class="form-control" type="0" maxlength="200"
                                     id="Username I use for my Facebook account:"
                                     name="custom__Username I use for my Facebook account:" placeholder="username_fb">
                             </div>
 
-
+                            ​
                             <div class="mb-3 col-md-4">
-                                <label for="Username I use for my Instagram account" class="form-label">Uživatelské
-                                    jméno,
-                                    které používám pro svůj
-                                    účet na Instagramu:: </label>
+                                <label for="Username I use for my Instagram account" class="form-label">Username I use
+                                    for my Instagram account: </label>
                                 <input class="form-control" type="0" maxlength="200"
                                     id="Username I use for my Instagram account"
                                     name="custom__Username I use for my Instagram account" placeholder="username_ig">
@@ -124,10 +120,8 @@
                         <div style="margin-top: 1em; margin-bottom: 1em;">
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" id="gdprCheck">
-                                <label for="gdprCheck">
-                                    <a href="https://www.google.com" target="_blank">Souhlasím s podmínkami GDPR</a>
-                                </label>
-                            </div>
+                                  <p>I Agree to <a href="https://litfin.capital/privacy-policy/" rel="noopener noreferrer" target="_blank">Privacy Policy</a></p>
+                              </div>
                         </div>
 
                         <div style="display: flex; flex-direction: column; align-content: stretch;">
