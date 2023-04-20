@@ -42,16 +42,19 @@
                                     placeholder="name@mail.com">
                             </div>
                         </div>
-                        <div class="mb-3 col-md-4">
-                            <label for="clientType" class="form-label">Legal status</label>
-                            <select id="clientType" name="clientType" class="form-control">
-                                <option selected="">Person</option>
-                                <option>Company</option>
-                            </select>
-                        </div>
-                        <div id="compNameDiv" class="mb-3 col-md-4" style="display:none;">
-                            <label for="companyName" class="form-label">Company name</label>
-                            <input type="text" class="form-control" id="companyName" name="companyName">
+
+                        <div style="display: flex; justify-content: space-between;">
+                            <div class="mb-3 col-md-4">
+                                <label for="clientType" class="form-label">Legal status</label>
+                                <select id="clientType" name="clientType" class="form-control">
+                                    <option selected="">Person</option>
+                                    <option>Company</option>
+                                </select>
+                            </div>
+                            <div id="compNameDiv" class="mb-3 col-md-4" style="display:none;">
+                                <label for="companyName" class="form-label">Company name</label>
+                                <input type="text" class="form-control" id="companyName" name="companyName">
+                            </div>
                         </div>
 
                         <script>
@@ -60,7 +63,7 @@
                             const box = document.getElementById('compNameDiv');
 
                             el.addEventListener('change', function handleChange(event) {
-                                if (event.target.value === 'Právnická osoba') {
+                                if (event.target.value === 'Company') {
                                     box.style.display = 'block';
                                 } else {
                                     box.style.display = 'none';
@@ -68,51 +71,31 @@
                             });
                         </script>
 
+
                         <!--Section for case specific attributes-->
-
-                        <fieldset>
-                            <legend>I have been using these apps for any time period from 2015 until now.</legend>
-                            ​<div style="display: flex; justify-content: space-between;">
-                                <div style="display: flex; justify-content: space-between;">
-                                    <input type="checkbox" id="Whatsapp" name="Whatsapp" unchecked>
-                                    <label for="scales">Whatsapp</label>
-                                </div>
-                                <div>
-                                    <input type="checkbox" id="Facebook" name="Facebook" unchecked>
-                                    <label for="scales">Facebook</label>
-                                </div>
-                                <div>
-                                    <input type="checkbox" id="Instagram" name="Instagram" unchecked>
-                                    <label for="scales">Instagram</label>
-                                </div>
-                            </div>
-                        </fieldset>
-
-                        <div class="row" style="margin-top: 2em; align-items: flex-end;">
+                        <div
+                            style="display: flex; flex-direction: row; justify-content: space-between; align-items: flex-end;">
                             <div class="mb-3 col-md-4">
-                                <label for="Phone number I used for my Whatsapp account:" class="form-label">Phone
-                                    number I used for my Whatsapp account:: </label>
-                                <input class="form-control" type="0" maxlength="200"
-                                    id="Phone number I used for my Whatsapp account:"
-                                    name="custom__Phone number I used for my Whatsapp account:" placeholder="phone">
+                                <label for="Choose your current status with Whatsapp:" class="form-label">Choose your
+                                    current status with Whatsapp:: </label>
+                                <select class="form-control" name="custom__Choose your current status with Whatsapp:">
+                                    <option id=" I currently have an active account on Whatsapp." value="option0">I
+                                        currently have an active account on Whatsapp.</option>
+                                    <option id=" I had active account on Whatsapp for any time period after 1.1.2015"
+                                        value="option1">I had active account on Whatsapp for any time period after
+                                        1.1.2015
+                                    </option>
+                                </select>
                             </div>
 
-                            ​
                             <div class="mb-3 col-md-4">
-                                <label for="Username I use for my Facebook account:" class="form-label">Username I use
-                                    for my Facebook account:: </label>
+                                <label for="Phone number that you used for your Whatsapp account"
+                                    class="form-label">Phone
+                                    number that you used for your Whatsapp account: </label>
                                 <input class="form-control" type="0" maxlength="200"
-                                    id="Username I use for my Facebook account:"
-                                    name="custom__Username I use for my Facebook account:" placeholder="username_fb">
-                            </div>
-
-                            ​
-                            <div class="mb-3 col-md-4">
-                                <label for="Username I use for my Instagram account" class="form-label">Username I use
-                                    for my Instagram account: </label>
-                                <input class="form-control" type="0" maxlength="200"
-                                    id="Username I use for my Instagram account"
-                                    name="custom__Username I use for my Instagram account" placeholder="username_ig">
+                                    id="Phone number that you used for your Whatsapp account"
+                                    name="custom__Phone number that you used for your Whatsapp account"
+                                    placeholder="Whatsapp phone number">
                             </div>
                         </div>
 
@@ -120,8 +103,9 @@
                         <div style="margin-top: 1em; margin-bottom: 1em;">
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" id="gdprCheck">
-                                  <p>I Agree to <a href="https://litfin.capital/privacy-policy/" rel="noopener noreferrer" target="_blank">Privacy Policy</a></p>
-                              </div>
+                                <p>I have read and agree to <a href="https://litfin.capital/privacy-policy/"
+                                        rel="noopener noreferrer" target="_blank">privacy policy</a></p>
+                            </div>
                         </div>
 
                         <div style="display: flex; flex-direction: column; align-content: stretch;">
@@ -157,7 +141,7 @@
                             });
 
                             const jsonData = JSON.stringify(objectData);
-                            const submitUrl = "https://apcam-webapp.azurewebsites.net/api/client-registrations/public/lead-form-registration/case/7";
+                            const submitUrl = "https://apcam-webapp.azurewebsites.net/api/client-registrations/public/lead-form-registration/case/9";
 
                             fetch(submitUrl, {
                                 method: 'POST',
